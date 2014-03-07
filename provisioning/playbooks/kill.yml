@@ -1,7 +1,8 @@
 ---
 
 - hosts: nimbus
-  user: root
+  sudo: True
+  user: vagrant
   tasks:
    - name: kill topology {{name}}
      shell: "{{storm_home}}/bin/storm kill {{name}}"
